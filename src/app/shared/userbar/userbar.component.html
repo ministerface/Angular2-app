@@ -1,0 +1,17 @@
+<div *ngIf="isAuth" class="user-auth text-right">
+    Welcome Semchenko Viacheslav | <a (click)="getWindow($event)" href="">Logout</a>
+</div>
+
+<div *ngIf="!isAuth" class="user-auth text-right">
+    Welcome Anonimous | <a (click)="login($event)" href="">Login</a>
+</div>
+
+<p-dialog header="Exit the app" [(visible)]="display" modal="modal" [(draggable)]="draggable" [(resizable)]="resizable" showEffect="fade">
+    <p>Are you sure you want to exit the application?</p>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" class="btn btn-default" (click)="display=false">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="closeTab()">OK</button>
+        </div>
+    </footer>
+</p-dialog>

@@ -1,0 +1,31 @@
+<div class="tab-content">
+    <div class="tab-pane active">
+        <table class="table table-bordered table-hover table-black">
+            <thead>
+                <tr>
+                    <th>ISP</th>
+                    <th>Undefined Title</th>
+                    <th>Peak (kbps)</th>
+                    <th>Network SIO (Count)</th>
+                    <th>Kbps / SIO</th>
+                    <th>Current Time</th>
+                    <th>Last Month Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data | CategoryPipe: category" [ngClass]="setColor(item.peak)">
+                    <td>{{item.isp}}</td>
+                    <td>{{item.undefined_title}}</td>
+                    <td>{{item.peak}}</td>
+                    <td>{{item.network}}</td>
+                    <td>{{item.kbps}}</td>
+                    <td>{{item.current_time}}</td>
+                    <td>{{item.last_month}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

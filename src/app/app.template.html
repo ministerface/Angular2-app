@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="col-md-6">
+                <dr-userbar></dr-userbar>
+            </div>
+        </div>
+    </div>
+    <dr-navbar></dr-navbar>
+</div>
+<div class="main">
+    <dr-report *ngIf="isAuth"></dr-report>
+    <div class="messageAuth" *ngIf="!isAuth">
+        To see the report, login to the system
+    </div>
+</div>
+<div class="footer">
+    © DonRiver, inc. 2013. All Rights Reserved
+</div>

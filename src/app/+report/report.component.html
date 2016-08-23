@@ -1,0 +1,11 @@
+<div class="panel panel-black">
+    <div class="panel-heading clearfix">
+        <h3 class="panel-title left vert-align">{{ title }}: <span>{{ currentDate | date:"dd.MM.yy" }}</span></h3>
+        <div class="download-excel right">
+            <a href="" (click)="download()" id="test"><img width="30px;" src="../../image/Excel.png" alt="" /></a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <dr-tabs [category]="reportCategory" [data]="reportData"></dr-tabs>
+    </div>
+</div>

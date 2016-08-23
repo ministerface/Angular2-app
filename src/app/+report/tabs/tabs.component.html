@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs black-tabs">
+    <li *ngFor="let categ of category" [class.active]="categ.id === selectedCategoryId" (click)="onSelect(categ)">{{categ.title}}</li>
+</ul>
+<dr-tab [category]="selectedCategoryId" [data]="data"></dr-tab>

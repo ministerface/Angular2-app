@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default">
+
+    <ul class="nav navbar-nav">
+        <li class="active"><a class="black-nav-link" href="#">Номе <span class="sr-only">(current)</span></a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" [ngClass]="{open: dropdown}">
+            <a (click)="isOpen($event)" href="" class="dropdown-toggle black-nav-link black-dropdown">Menu <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a (click)="isActivate($event)" href="">NBN ISP Report</a></li>
+                <li><a (click)="isActivate($event)" href="">DSL ISP Report</a></li>
+                <li><a (click)="isActivate($event)" href="">Configuration</a></li>
+            </ul>
+        </li>
+        <li>
+          <a class="black-nav-link margin-left-15" href="#">Back</a>
+        </li>
+    </ul>
+
+</nav>
+
+<p-growl [value]="msgs" life="5000"></p-growl>
